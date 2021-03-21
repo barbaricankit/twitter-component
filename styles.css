@@ -1,0 +1,260 @@
+body {
+    font-family: sans-serif;
+  }
+  body {
+    margin: 0;
+    padding: auto;
+  }
+  
+  .trending {
+    grid-area: trends;
+    border-right: 1px solid gray;
+  }
+  
+  .navigation {
+    grid-area: nav;
+    border-right: 1px solid gray;
+    position: relative;
+  }
+  .main {
+    grid-area: main;
+    border-right: 1px solid gray;
+    position: relative;
+    margin-top: 0;
+  }
+  #entire-page {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: "nav main trends";
+  }
+  .tweet-text {
+    border: none;
+    box-sizing: border-box;
+    width: 85%;
+    height: 10%;
+    margin-left: 5rem;
+  }
+  @media only screen and (max-width: 1460px) and (min-width: 1100px) {
+    #entire-page {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-areas: "nav main trends";
+    }
+    .navigation {
+      position: relative;
+    }
+    .navigation .nav-text,
+    .navigation .tweet-btn,
+    .profile-email,
+    .profile-name {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 1100px) and (min-width: 500px) {
+    #entire-page {
+      display: grid;
+      grid-template-columns: 0.5fr 2fr 0.2fr;
+      grid-template-areas: "nav main .";
+    }
+    .navigation {
+      position: relative;
+    }
+    .tweet-text {
+      border: none;
+      box-sizing: border-box;
+      width: 78%;
+      height: 10%;
+      margin-left: 5rem;
+    }
+    .trending,
+    .navigation .tweet-btn,
+    .navigation .nav-text,
+    .profile-email,
+    .profile-name {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 540px) {
+    #entire-page {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "main";
+    }
+    .trending {
+      display: none;
+    }
+    .nav-text {
+      display: none;
+    }
+    .navigation,
+    .main-content,
+    .avatar,
+    .tweet-text {
+      display: none;
+    }
+    .main {
+      border: none;
+    }
+  }
+  
+  .star-icon {
+    position: absolute;
+    right: 1rem;
+  }
+  
+  .tweet-btn {
+    padding: 1rem 3rem;
+    margin: 2rem;
+    background-color: rgb(29, 161, 242);
+    border-radius: 9999px;
+    font-size: large;
+    font-weight: 700;
+    color: white;
+  }
+  .nav-option {
+    padding: 0.5rem;
+    font-size: x-large;
+    font-weight: 540;
+  }
+  
+  .nav-options {
+    margin: 2rem;
+  }
+  .nav-icon {
+    width: 1.2em;
+    height: 1.2em;
+    color: rgba(29, 161, 242, 1);
+    padding-left: 1.2rem;
+  }
+  .avatar-navigation-bar {
+    margin: 1rem;
+    padding-left: 1rem;
+  }
+  .nav-text {
+    position: relative;
+    bottom: 0.3rem;
+    padding-left: 2rem;
+  }
+  .nav-header {
+    margin: 1rem;
+    margin-top: 0;
+    font-size: x-large;
+    font-weight: 600;
+  }
+  .header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    padding-top: 1rem;
+  }
+  .avatar {
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 0.5rem;
+  }
+  
+  ::placeholder {
+    color: black;
+    font-size: x-large;
+    padding-left: 1rem;
+  }
+  .tweet-extra-details {
+    margin-left: 2rem;
+    padding: 0.5rem;
+    position: relative;
+  }
+  .small-btn {
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    background-color: rgb(29, 161, 242);
+    border-radius: 9999px;
+    font-size: large;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: -1rem;
+  }
+  .search-box {
+    width: 60%;
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 0.2rem;
+    border-radius: 9999px;
+  }
+  .search {
+    position: relative;
+  }
+  .search-icon {
+    position: absolute;
+    left: 0.5rem;
+    z-index: 4;
+    top: 0.8rem;
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .trending-section {
+    /* border: 1px solid black; */
+    padding: 1rem 0;
+    margin: 1rem;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    border: 0.1rem solid rgb(235, 238, 240);
+    border-bottom: none;
+    background-color: rgb(247, 249, 250);
+    font-size: large;
+  }
+  .trend-items {
+    padding: 1rem;
+    cursor: pointer;
+  }
+  .show-more-btn {
+    text-align: center;
+    color: rgb(22, 19, 221);
+  }
+  
+  .profile-name {
+    font-size: large;
+    font-weight: 800;
+    margin-left: 5rem;
+  }
+  .profile-email {
+    font-size: large;
+    font-weight: 800;
+    margin-left: 5rem;
+  }
+  .name {
+    font-weight: bold;
+    padding-left: 1rem;
+  }
+  .small-avatar {
+    width: 50px;
+    border-radius: 50%;
+  }
+  .username {
+    font-weight: 100;
+  }
+  .user-details {
+    display: flex;
+  }
+  
+  .tweet1 {
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 1rem;
+  }
+  .like-btns {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .like-count {
+    position: relative;
+    bottom: 0.4rem;
+    left: 0.3rem;
+  }
+  
